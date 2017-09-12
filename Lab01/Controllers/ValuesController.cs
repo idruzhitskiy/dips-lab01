@@ -6,10 +6,10 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Lab01.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/")]
     public class ValuesController : Controller
     {
-        [HttpGet("{number}")]
+        [HttpGet("inc/{number}")]
         public string Increment(int number)
         {
             return (number + 1).ToString();
