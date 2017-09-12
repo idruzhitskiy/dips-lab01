@@ -20,7 +20,7 @@ namespace Lab01.Controllers
         [HttpGet("{id}")]
         public string Get(int id)
         {
-            return "value";
+            return (id + 1).ToString();
         }
 
         // POST api/values
