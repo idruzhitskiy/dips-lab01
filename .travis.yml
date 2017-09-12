@@ -1,3 +1,7 @@
-install:
+language: csharp
+solution: Lab01.sln
+script: 
   - dotnet restore
   - dotnet build
+  - dotnet test
+  
