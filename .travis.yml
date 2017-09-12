@@ -6,7 +6,7 @@ build: trusty
 script:
 - dotnet restore
 - dotnet build
-- dotnet test
+- dotnet test Tests
 deploy:
   provider: heroku
   api_key:
