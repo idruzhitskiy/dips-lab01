@@ -3,7 +3,11 @@ solution: Lab01.sln
 mono: none
 dotnet: 2.0.0
 build: trusty
-script: 
-  - dotnet restore
-  - dotnet build
-  - dotnet test
+script:
+- dotnet restore
+- dotnet build
+- dotnet test
+deploy:
+  provider: heroku
+  api_key:
+    secure: BLd1gUKTf8pAxsyr5RMCi+V8aNnuvNSoQfTTYRaF4D7Rzjz1VTeCeO/LUayHG4AiKJpFE9khhnMMfySe+4w5alOxL4AtAbJHHK8qj7YBg9Wk0hJiTpssqnmzY78JmyNqa58uu9o0RwIoYfLzgaCvhiFdDOJx0h5u6rw1tDbNpeRlZk178YFozwZEF+hgwnXj2fUWAvGdPKbeLN9trqyiZd/cNnH6akT9J/hauvut5b4sSmCvfF6I2h1BD5mpa6j43lh3goK4roARvYjRoAlj9fFmZRyUwwr+J1niRGyL8yXMbd3tInLU9febUGD3O95V3nOG+c6YJshdi1WCnYhBhfxSbPSh6CIM6YabjwZATa7FSrRVt6O7+JY4fF0aqC5bv5RCv2Bns7Nj8f+Pl+QGvr+eQKreX5PgoBPjA+4dcnsJm881MlVSn6KlGBZX9pfH6F/u5Z2KON8WlFn0K/1iuG0t+4p5pl5TYCHoBFSBPfCGRFzn+3ah/3fum8IgLNF2d5a5mxkOYEJweousBFX6m6Y/IsoMHPDuRZ85dahfoyfoOVkEUJv9xULS3yvNlO68U12ixEun5+i2/JHQb5XiJxdyXIwL3pE9xoaOJc3uiVR0b/dCyHWYN/iAqV/FHDuTKIw5RjWYE/YXY+1B1CLTvAAmoD5EY1+MyFD3ztXC1UU=
