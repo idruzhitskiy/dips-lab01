@@ -9,36 +9,16 @@ namespace Lab01.Controllers
     [Route("api/[controller]")]
     public class ValuesController : Controller
     {
-        // GET api/values
-        [HttpGet]
-        public IEnumerable<string> Get()
+        [HttpGet("{number}")]
+        public string Increment(int number)
         {
-            return new string[] { "value1", "value2" };
+            return (number + 1).ToString();
         }
 
-        // GET api/values/5
-        [HttpGet("{id}")]
-        public string Get(int id)
+        [HttpGet("sum/{num1}/{num2}")]
+        public string Sum(int num1, int num2)
         {
-            return (id + 1).ToString();
-        }
-
-        // POST api/values
-        [HttpPost]
-        public void Post([FromBody]string value)
-        {
-        }
-
-        // PUT api/values/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody]string value)
-        {
-        }
-
-        // DELETE api/values/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
+            return (num1 + num2).ToString();
         }
     }
 }
