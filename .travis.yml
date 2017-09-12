@@ -3,11 +3,12 @@ solution: Lab01.sln
 mono: none
 dotnet: 2.0.0
 build: trusty
-install:
-  - dotnet restore
-  - dotnet build
-test:
-  - dotnet test Tests
+jobs:
+  include:
+    - stage: build
+    - script: ./scripts/linux/build.sh
+    - stage: test
+    - script: ./scripts/linux/test.sh
 deploy:
   provider: heroku
   api_key:
